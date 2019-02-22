@@ -38,19 +38,37 @@ class ViewController: UIViewController {
     
     
     //MARK IBActions
-    @IBAction func Enter_tapped(_ sender: Any) {
+    @IBAction func Enter_Tapped(_ sender: Any) {
+        if userSegmentedController.tag == 0 {
+        print("first block")
+        if username_text.text != "adminUsername" || password_text.text != "adminPassword" {
+            print("second block")
+            let loginErrorAlert = UIAlertController(title: "Login Error", message: "Either your username or password was incorrect. Please try again.", preferredStyle: .alert)
+            let loginErrorAction = UIAlertAction(title: "Ok", style: .destructive)
+            loginErrorAlert.addAction(loginErrorAction)
+            self.present(loginErrorAlert, animated: true, completion: nil)
+            print("third block")
+        } else if username_text.text == "adminUsername" && password_text.text == "adminPassword" {
+            print("fourth")
+            performSegue(withIdentifier: "loginToAdminHomeScreen", sender: self)
+            self.navigationController!.navigationBar.isHidden = false
+            
+        }
         if userSegmentedController.tag == 1 {
+            print("first block")
             if username_text.text != "facultyUsername" || password_text.text != "facultyPassword" {
+                print("second block")
                 let loginErrorAlert = UIAlertController(title: "Login Error", message: "Either your username or password was incorrect. Please try again.", preferredStyle: .alert)
                 let loginErrorAction = UIAlertAction(title: "Ok", style: .destructive)
                 loginErrorAlert.addAction(loginErrorAction)
                 self.present(loginErrorAlert, animated: true, completion: nil)
+                print("third block")
             } else if username_text.text == "facultyUsername" && password_text.text == "facultyPassword" {
                 performSegue(withIdentifier: "loginToFacultyHomeScreen", sender: self)
                 self.navigationController!.navigationBar.isHidden = false
                 
+                }
             }
         }
     }
 }
-

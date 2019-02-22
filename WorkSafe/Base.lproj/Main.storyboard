@@ -48,8 +48,8 @@
                                             <color key="titleColor" red="0.4523815732" green="0.1129136609" blue="0.81146777849999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="Enter_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIK-ep-fSH"/>
-                                            <segue destination="mDD-OM-Azj" kind="show" identifier="loginToFacultyHomeScreen" id="egI-ze-Lgx"/>
+                                            <action selector="Enter_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugU-Ni-f97"/>
+                                            <action selector="Enter_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FhM-Sk-TSY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vye-Kt-B96">
@@ -91,6 +91,8 @@
                         <outlet property="userSegmentedController" destination="C53-UZ-2ML" id="jvy-ua-3Ku"/>
                         <outlet property="username_text" destination="xeM-43-KT8" id="nNQ-dd-8fl"/>
                         <segue destination="Eef-QJ-brF" kind="show" identifier="loginToCreateAdminAccount" id="rKF-RX-U7I"/>
+                        <segue destination="mDD-OM-Azj" kind="show" identifier="loginToFacultyHomeScreen" id="0uE-4m-jqA"/>
+                        <segue destination="gej-PT-l24" kind="show" identifier="loginToAdminHomeScreen" id="zRA-QF-2n5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -180,6 +182,22 @@
             <point key="canvasLocation" x="5201" y="269"/>
         </scene>
         <!--Item-->
+        <scene sceneID="xCu-HG-uTE">
+            <objects>
+                <viewController id="4Yz-Vh-lXR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h11-Hk-qty">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PFI-6i-1mk"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="hHD-Op-gwq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csp-ri-rub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936.79999999999995" y="1159.9700149925038"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="LgX-Kv-XTC">
             <objects>
                 <viewController id="BOR-WI-EGw" sceneMemberID="viewController">
@@ -193,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGi-GW-QdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2070" y="1072"/>
+            <point key="canvasLocation" x="3008.8000000000002" y="1071.8140929535234"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="o6y-Pf-44D">
@@ -246,6 +264,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4a0-fB-mbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2.3999999999999999" y="271.21439280359823"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cCA-PX-QOZ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gej-PT-l24" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X1t-iR-o8N">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4Yz-Vh-lXR" kind="relationship" relationship="viewControllers" id="2VG-nk-njQ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LV8-Yl-NS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2.3999999999999999" y="1159.9700149925038"/>
         </scene>
     </scenes>
 </document>
