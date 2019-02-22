@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    //Please comment your code so we can use it for future reference - Jacob Tassinari
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -52,6 +52,7 @@ class ViewController: UIViewController {
             print("fourth")
             performSegue(withIdentifier: "loginToAdminHomeScreen", sender: self)
             self.navigationController!.navigationBar.isHidden = false
+            print("fifth")
             
         }
         if userSegmentedController.tag == 1 {
